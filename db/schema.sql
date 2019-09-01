@@ -9,6 +9,14 @@ CREATE TABLE burgers
     PRIMARY KEY (id)
 );
 
+CREATE TABLE clients (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  phone varchar(255) NOT NULL,
+  address varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE soups
 (
     id int NOT NULL AUTO_INCREMENT,

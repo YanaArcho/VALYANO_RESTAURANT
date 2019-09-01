@@ -12,6 +12,13 @@ INSERT INTO salads (name) VALUES ("Summer vegan Salad");
 INSERT INTO salads (name) VALUES ("Greece Salad");
 INSERT INTO salads (name) VALUES ("Salad with Carrot");
 
+INSERT INTO clients (name, phone, address) VALUES ("Vasya", "+380656435647", "Topolivska 7/92");
+INSERT INTO clients (name, phone, address) VALUES ("Valentyn", "+380660639842", "Poletayeva 17/83");
+INSERT INTO clients (name, phone, address) VALUES ("Max", "+380676573675", "Grygorivska 3/6");
+INSERT INTO clients (name, phone, address) VALUES ("Yana", "+380990343123", "Kashtanivska 14/100");
+INSERT INTO clients (name, phone, address) VALUES ("Vanya", "+380675463781", "Komarova 11-a/45");
+INSERT INTO clients (name, phone, address) VALUES ("Olaxij", "+380660754482", "Holovna 31-b/117");
+
 INSERT INTO soups (name) VALUES ("Brussel Soup");
 INSERT INTO soups (name) VALUES ("Soup with Cheese");
 INSERT INTO soups (name) VALUES ("Soup with Mushrooms");

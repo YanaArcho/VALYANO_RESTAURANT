@@ -1,38 +1,860 @@
-<h1>Yana's Vegetarian Restaurant</h1>
+<body>
+  <a class="scrollToTop" href="#">
+    <i class="fa fa-angle-up"></i>
+  </a>
 
-<h2>Burgers of the Day</h2>
+  <header id="mu-header">  
+    <nav class="navbar navbar-default mu-main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> 
+        </div>
+        <a class="navbar-brand" href="index.html">Yana's Vegetarian Restaurant</a>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#mu-about-us">ABOUT US</a></li>                       
+            <li><a href="#mu-restaurant-menu">MENU</a></li>                       
+            <li><a href="#mu-reservation">RESERVATION</a></li>                       
+            <li><a href="#mu-contact">CONTACT</a></li> 
+          </ul>                            
+        </div>      
+      </div>          
+    </nav> 
+  </header>
 
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
-      {{> burger/burger-block eaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+  <section id="mu-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-about-us-area">
 
-<h2>Burgers You Orderd</h2>
+            <div class="mu-title">
+              <span class="mu-subtitle">Discover</span>
+              <h2>ABOUT US</h2>
+            </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burger/burger-block eaten=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mu-about-us-left">     
+                <img src="assets/img/1.jpg" alt="img">           
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mu-about-us-right">
+                  <p>Yana`s Vegan Restaurant mission is to bring healthy, plant-based, locally sourced, and seasonally inspired food to Ukrainians. We strive to craft every dish rooted in balanced nutritional, utilizing whole, plant-based ingredients with global influences and innovative twists on traditional vegan cuisine.</p>                              
+                  <ul>
+                    <li>We value integrity in both the service to our customers and the ingredients we source</li>
+                    <li>We value a quality and consistent experience for our customers and the dishes we create</li>                  
+                    <li>We value the health benefits, the concerns about the environment, the ethical convictions and the pleasure seeking aspects of the food we serve just as our customers do.</li>
+                  </ul>
+                  <p>We are glad for new clients!</p>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+<section id="mu-restaurant-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-restaurant-menu-area">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+            <div class="mu-title">
+              <span class="mu-subtitle">Discover</span>
+              <h2>OUR MENU</h2>
+            </div>
+            
+            <div class="mu-restaurant-menu-content">
+              <ul class="nav nav-tabs mu-restaurant-menu">
+                <li class="active"><a href="#burgers" data-toggle="tab">Burgers</a></li>
+                <li><a href="#soups" data-toggle="tab">Soups</a></li>
+                <li><a href="#salads" data-toggle="tab">Salads</a></li>
+                <li><a href="#vegan_rolls" data-toggle="tab">Vegan Rolls</a></li>
+                <li><a href="#drinks" data-toggle="tab">Drinks</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="burgers">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/burger-1.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/burger-2.jpeg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/burger-3.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/burger-4.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-2.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-1.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+                </div>
+
+                <div class="tab-pane fade" id="soups">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-3.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-4.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-3.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-4.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-3.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-4.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+                </div>
+
+                <div class="tab-pane fade" id="salads">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-6.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-6.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+                </div>
+
+                <div class="tab-pane fade" id="vegan_rolls">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+                </div>
+
+                <div class="tab-pane fade" id="drinks">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-10.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">English burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-10.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chines burgers</a></h4>
+                                  <span class="mu-menu-price">$11.95</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Indian burgers</a></h4>
+                                  <span class="mu-menu-price">$15.85</span>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+
+                   </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<section id="mu-reservation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mu-reservation-area">
+
+          <div class="mu-title">
+            <span class="mu-subtitle">Make A</span>
+            <h2>Reservation</h2>
+          </div>
+
+          <div class="mu-reservation-content">
+            <p>
+Here you can reserve a table for any date! We will wait for you and serve you very well!</p>
+
+            <div class="col-md-6">
+              <div class="mu-reservation-left">
+                <form class="mu-reservation-form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">                       
+                        <input type="text" class="form-control" placeholder="Full Name">
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">                        
+                        <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">                        
+                        <input type="text" class="form-control" placeholder="Phone Number">
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option value="0">How Many people?</option>
+                          <option value="1 Person">1 Person</option>
+                          <option value="2 People">2 People</option>
+                          <option value="3 People">3 People</option>
+                          <option value="4 People">4 People</option>
+                          <option value="5 People">5 People</option>
+                          <option value="6 People">6 People</option>
+                          <option value="7 People">7 People</option>
+                          <option value="8 People">8 People</option>
+                          <option value="9 People">9 People</option>
+                          <option value="10 People">10 People</option>
+                        </select>                      
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="datepicker" placeholder="Date">              
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+                      </div>
+                    </div>
+                    <button type="submit" class="mu-readmore-btn">Make Reservation</button>
+                  </div>
+                </form>    
+              </div>
+            </div>
+
+            <div class="col-md-5 col-md-offset-1">
+              <div class="mu-reservation-right">
+                <div class="mu-opening-hour">
+                  <h2>Opening Hours</h2>
+                    <ul class="list-unstyled">
+                      <li>
+                          <p>Monday &amp; Tuesday</p>
+                          <p>9:00 AM - 10:00 PM</p>
+                      </li>
+                      <li>
+                          <p>Wednesday &amp; Thursday</p>
+                          <p>9:00 AM - 11:00 PM</p>
+                      </li>
+                      <li>
+                          <p>Friday &amp; Saturday</p>
+                          <p>9:00 AM - 12:00 PM</p>
+                      </li>
+                      <li>
+                          <p>Sunday</p>
+                          <p>8:00 AM - 12:00 PM</p>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>  
 
-  <div class="form-group">
-    <label for="eaten">Wanna try before you buy?</label><br>
-    <input type="radio" name="eaten" value="1" checked> Ordered!<br>
-    <input type="radio" name="eaten" value="0"> To the kitchen.
+<section id="mu-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mu-contact-area">
+
+          <div class="mu-title">
+            <span class="mu-subtitle">Get In Touch</span>
+            <h2>Contact Us</h2>
+          </div>
+
+          <div class="mu-contact-content">
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="mu-contact-left">
+                  <!-- Email message div -->
+                  <div id="form-messages"></div>
+                  <!-- Start contact form -->
+                  <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+                    <div class="form-group">
+                      <label for="name">Your Name</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    </div>                      
+                    <div class="form-group">
+                      <label for="subject">Subject</label>
+                      <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>                        
+                      <textarea class="form-control" id="message" name="message"  cols="30" rows="10" placeholder="Type Your Message" required></textarea>
+                    </div>                      
+                    <button type="submit" class="mu-send-btn">Send Message</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="mu-contact-right">
+                  <div class="mu-contact-widget">
+                    <h3>Office Address</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia temporibus corporis ea non consequatur porro corrupti hic voluptatibus assumenda, doloribus.</p>
+                    <address>
+                      <p><i class="fa fa-phone"></i> + (380) 674005302</p>
+                      <p><i class="fa fa-envelope-o"></i>ar4er.tw1n@gmail.com</p>
+                      <p><i class="fa fa-map-marker"></i>4, Kobylyanska Street, Chernivtsi, 58018, Ukraine</p>
+                    </address>
+                  </div>
+                  <div class="mu-contact-widget">
+                    <h3>Open Hours</h3>                      
+                    <address>
+                      <p><span>Monday - Friday</span> 9.00 am to 12 pm</p>
+                      <p><span>Saturday</span> 9.00 am to 11 pm</p>
+                      <p><span>Sunday</span> 10.00 am to 12 pm</p>
+                    </address>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <button type="submit">Add Burger</button>
-</form>
+  <h2>Burgers of the Day</h2>
+
+  <ul>
+    {{#each burgers}}
+      {{#unless eaten}}
+        {{> burger/burger-block eaten=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+
+  <h2>Burgers You Orderd</h2>
+
+  <ul>
+    {{#each burgers}}
+      {{#if eaten}}
+        {{> burger/burger-block eaten=false}}
+      {{/if}}
+    {{/each}}
+  </ul>
+
+  <h2>Add a Burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="eaten">Wanna try before you buy?</label><br>
+      <input type="radio" name="eaten" value="1" checked> Ordered!<br>
+      <input type="radio" name="eaten" value="0"> To the kitchen.
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+
+  <footer id="mu-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mu-footer-area">
+              <div class="mu-footer-social">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-instagram"></span></a>
+                <a href="#"><span class="fa fa-google-plus"></span></a>
+                <a href="#"><span class="fa fa-github"></span></a>
+                <a href="#"><span class="fa fa-youtube"></span></a>
+              </div>
+              <div class="mu-footer-copyright">
+                <p>&copy; Copyright <a rel="nofollow" href="http://markups.io">vegan-restaurant.com.ua</a>. All right reserved.</p>
+              </div>         
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script src="assets/js/jquery.min.js"></script>  
+  <script src="assets/js/bootstrap.js"></script>   
+	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript" src="assets/js/simple-animated-counter.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script> 
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script src="assets/js/custom.js"></script> 
+</body>
