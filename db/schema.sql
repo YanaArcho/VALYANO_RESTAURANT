@@ -9,11 +9,14 @@ CREATE TABLE burgers
     PRIMARY KEY (id)
 );
 
-CREATE TABLE clients (
+CREATE TABLE reservations 
+(
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(255) NOT NULL,
+  fullname varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
   phone varchar(255) NOT NULL,
-  address varchar(255) NOT NULL,
+  people int NOT NULL,
+  date DATE NOT NULL,
   PRIMARY KEY (id)
 );
 
