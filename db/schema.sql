@@ -20,6 +20,16 @@ CREATE TABLE reservations
   PRIMARY KEY (id)
 );
 
+CREATE TABLE contacts 
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  subject VARCHAR(255) NOT NULL,
+  message LONGTEXT NULL,
+  PRIMARY KEY (id)
+);
+
 CREATE TABLE soups
 (
     id int NOT NULL AUTO_INCREMENT,

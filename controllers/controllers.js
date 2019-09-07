@@ -7,6 +7,9 @@ let burger = require("../models/burger.js");
 let soup = require("../models/soup.js");
 let salad = require("../models/salad.js");
 let vegan_roll = require("../models/vegan_roll.js");
+let reservation = require("../models/reservation.js");
+let contact = require("../models/contact.js");
+
 router.get("/", (req, res) => {
     burger.all((data) => {
         let hbsObject = {
@@ -32,6 +35,28 @@ router.get("/", (req, res) => {
             })
 });
   
+router.post("/api/reservations", (req, res) => {
+  reservation.create([
+    "fullname", "email", "phone", "people", "date", "about"
+  ], [
+    req.body.fullname, req.body.email, req.body.phone, req.body.people, req.body.date, req.body.about
+  ], (result) => {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
+router.post("/api/contacts", (req, res) => {
+  contact.create([
+    "name", "email", "subject", "message"
+  ], [
+    req.body.name, req.body.email, req.body.subject, req.body.message
+  ], (result) => {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
 //burgers
   router.post("/api/burgers", (req, res) => {
     burger.create([

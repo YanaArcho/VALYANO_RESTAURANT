@@ -93,10 +93,10 @@
                 <div class="tab-pane fade in active" id="burgers">
                   <div class="mu-tab-content-area">
                     <div class="row">
+                      {{#each burgers}}
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
-                            {{#each burgers}}
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -111,10 +111,10 @@
                                 </div>
                               </div>
                             </li>
-                            {{/each}}
                           </ul>   
                        </div>
                      </div>
+                    {{/each}}
                    </div>
                  </div>
                 </div>
@@ -122,11 +122,10 @@
                 <div class="tab-pane fade" id="soups">
                   <div class="mu-tab-content-area">
                     <div class="row">
-
+                      {{#each soups}}
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
-                            {{#each soups}}
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -141,11 +140,10 @@
                                 </div>
                               </div>
                             </li>
-                            {{/each}}
                           </ul>   
                        </div>
                      </div>
-
+                     {{/each}}
                    </div>
                  </div>
                 </div>
@@ -153,11 +151,10 @@
                 <div class="tab-pane fade" id="salads">
                   <div class="mu-tab-content-area">
                     <div class="row">
-
+                      {{#each salads}}
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
-                            {{#each salads}}
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -172,11 +169,10 @@
                                 </div>
                               </div>
                             </li>
-                            {{/each}}
                           </ul>   
                        </div>
                      </div>
-
+                    {{/each}}
                    </div>
                  </div>
                 </div>
@@ -184,10 +180,10 @@
                 <div class="tab-pane fade" id="vegan_rolls">
                   <div class="mu-tab-content-area">
                     <div class="row">
+                      {{#each vegan_rolls}}
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
-                            {{#each vegan_rolls}}
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -202,11 +198,10 @@
                                 </div>
                               </div>
                             </li>
-                            {{/each}}
                           </ul>   
                        </div>
                      </div>
-
+                      {{/each}}
                    </div>
                  </div>
                 </div>
@@ -214,11 +209,10 @@
                 <div class="tab-pane fade" id="drinks">
                   <div class="mu-tab-content-area">
                     <div class="row">
-
+                      {{#each drinks}}
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
-                            {{#each drinks}}
                             <li>
                               <div class="media">
                                 <div class="media-left">
@@ -233,10 +227,10 @@
                                 </div>
                               </div>
                             </li>
-                            {{/each}}
                           </ul>   
                        </div>
                      </div>
+                     {{/each}}
 
                    </div>
                  </div>
@@ -270,23 +264,23 @@ Here you can reserve a table for any date! We will wait for you and serve you ve
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">                       
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input type="text" class="form-control" id="fullname" placeholder="Full Name" pattern="^[a-zA-Z ]+$" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">                        
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" id="email" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">                        
-                        <input type="text" class="form-control" placeholder="Phone Number">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone Number" pattern="^\+[1-9]{1}[0-9]{3,14}$" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <select class="form-control">
-                          <option value="0">How Many people?</option>
+                        <select class="form-control" id="people" required>
+                          <option value="">How Many people?</option>
                           <option value="1 Person">1 Person</option>
                           <option value="2 People">2 People</option>
                           <option value="3 People">3 People</option>
@@ -302,12 +296,12 @@ Here you can reserve a table for any date! We will wait for you and serve you ve
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="datepicker" placeholder="Date">              
+                        <input type="text" class="form-control" id="datepicker" placeholder="Date" required>              
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" cols="30" rows="10" placeholder="Your Message" id="about"></textarea>
                       </div>
                     </div>
                     <button type="submit" class="mu-readmore-btn">Make Reservation</button>
@@ -367,14 +361,14 @@ Here you can reserve a table for any date! We will wait for you and serve you ve
                   <!-- Email message div -->
                   <div id="form-messages"></div>
                   <!-- Start contact form -->
-                  <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+                  <form class="mu-contact-form">
                     <div class="form-group">
                       <label for="name">Your Name</label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" pattern="^[a-zA-Z ]+$" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email address</label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required>
                     </div>                      
                     <div class="form-group">
                       <label for="subject">Subject</label>
@@ -382,7 +376,7 @@ Here you can reserve a table for any date! We will wait for you and serve you ve
                     </div>
                     <div class="form-group">
                       <label for="message">Message</label>                        
-                      <textarea class="form-control" id="message" name="message"  cols="30" rows="10" placeholder="Type Your Message" required></textarea>
+                      <textarea class="form-control" id="message" name="message"  cols="30" rows="10" placeholder="Type Your Message"></textarea>
                     </div>                      
                     <button type="submit" class="mu-send-btn">Send Message</button>
                   </form>
@@ -451,4 +445,6 @@ Here you can reserve a table for any date! We will wait for you and serve you ve
 	<script src="assets/js/custom.js"></script> 
   <script type="text/javascript" src="assets/js/nivo-lightbox.js"></script> 
   <script type="text/javascript" src="assets/js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="assets/js/reservation.js"></script>
+  <script type="text/javascript" src="assets/js/contact.js"></script>
 </body>

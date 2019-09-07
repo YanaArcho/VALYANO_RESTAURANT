@@ -17,6 +17,7 @@ function main() {
         }
       });
 
+      $("#datepicker").datepicker({startDate: new Date()});
 	
     // Show Menu on Book
     $(window).bind('scroll', function() {
